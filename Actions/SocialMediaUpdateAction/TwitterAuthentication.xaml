@@ -1,0 +1,24 @@
+﻿<Window x:Class="SocialMediaUpdateAction.TwitterAuthentication"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:SocialMediaUpdateAction"
+             Height="281" Width="424" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" Title="Twitter - Proxy Switcher">
+    <Grid>
+        <GroupBox Header="{x:Static res:DefaultResources.TWStep1_GroupBox}" Height="62" HorizontalAlignment="Left" Margin="6,68,0,0" Name="groupBox1" VerticalAlignment="Top" Width="382">
+            <Grid>
+                <Button Content="{x:Static res:DefaultResources.TWLoginAndPin_Button}" Height="23" HorizontalAlignment="Left" Margin="114,8,0,0" Name="buttonLogin" VerticalAlignment="Top" Width="146" Click="buttonLogin_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{x:Static res:DefaultResources.TWStep2_GroupBox}" Height="69" HorizontalAlignment="Left" Margin="6,136,0,0" Name="groupBox2" VerticalAlignment="Top" Width="384">
+            <Grid>
+                <Label Content="{x:Static res:DefaultResources.TWPIN_Label}" Height="28" HorizontalAlignment="Left" Margin="6,12,0,0" Name="label1" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="43,14,0,0" Name="textBoxPIN" VerticalAlignment="Top" Width="120" />
+                <Button Content="{x:Static res:DefaultResources.TWAuthenticate_Button}" Height="23" HorizontalAlignment="Left" Margin="169,14,0,0" Name="buttonAuthenticate" VerticalAlignment="Top" Width="117" Click="buttonAuthenticate_Click" />
+            </Grid>
+        </GroupBox>
+        <TextBlock Height="50" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="{x:Static res:DefaultResources.TWDescription_Label}" VerticalAlignment="Top" TextWrapping="Wrap" />
+        <Button Content="{x:Static res:DefaultResources.Cancel_Button}" Height="23" HorizontalAlignment="Left" Margin="298,211,0,0" Name="buttonCancel" VerticalAlignment="Top" Width="92" Click="buttonCancel_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0EB8D4AB-4DAE-4713-B199-D07D4C7F3BBB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProxySwitcher.Actions.DefaultActions</RootNamespace>
+    <AssemblyName>ProxySwitcher.Actions.DefaultActions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangePrinterAction.cs" />
+    <Compile Include="ChangePrinter\ChangePrinterConfig.xaml.cs">
+      <DependentUpon>ChangePrinterConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePrinter\PrinterManager.cs" />
+    <Compile Include="DefaultResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DisableFirefoxProxyAction.cs" />
+    <Compile Include="DisableIE8ProxyAction.cs" />
+    <Compile Include="DisableOperaProxyAction.cs" />
+    <Compile Include="ExecuteScriptAction.cs" />
+    <Compile Include="ExecuteScript\ExecuteScriptSetup.xaml.cs">
+      <DependentUpon>ExecuteScriptSetup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FirefoxProxyAction.cs" />
+    <Compile Include="Firefox\DisableFirefoxConfig.xaml.cs">
+      <DependentUpon>DisableFirefoxConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Firefox\FirefoxCustomContent.xaml.cs">
+      <DependentUpon>FirefoxCustomContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Firefox\ProfileSelector.xaml.cs">
+      <DependentUpon>ProfileSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InternetExplorer8ProxyAction.cs" />
+    <Compile Include="InternetExplorer\IECustomContent.xaml.cs">
+      <DependentUpon>IECustomContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OperaProxyAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ChangePrinter\ChangePrinterConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteScript\ExecuteScriptSetup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Firefox\DisableFirefoxConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Firefox\FirefoxCustomContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Firefox\ProfileSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InternetExplorer\IECustomContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultResources.de.resx" />
+    <EmbeddedResource Include="DefaultResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProxySwitcher.Actions.ProxyBase\ProxySwitcher.Actions.ProxyBase.csproj">
+      <Project>{7FBA6D79-7A94-4459-AE00-FE44486FCC95}</Project>
+      <Name>ProxySwitcher.Actions.ProxyBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProxySwitcher.Common\ProxySwitcher.Common.csproj">
+      <Project>{7A90BD0C-AC94-43BB-8E1D-8C6488BB21DA}</Project>
+      <Name>ProxySwitcher.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\firefox.png" />
+    <EmbeddedResource Include="Images\ie8.png" />
+    <EmbeddedResource Include="Images\opera.png" />
+    <EmbeddedResource Include="Images\printer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "..\..\..\ProxySwitcher\bin\Debug\AddIns" /y
+xcopy "$(TargetDir)\de" "..\..\..\ProxySwitcher\bin\Debug\de" /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="ProxySwitcher.Actions.DefaultActions.InternetExplorer.IECustomContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:ProxySwitcher.Actions.DefaultActions"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="295">
+    <Grid>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="132,15,0,0" Name="comboBoxDialUpConnections" VerticalAlignment="Top" Width="151" SelectionChanged="comboBoxDialUpConnections_SelectionChanged" />
+        <CheckBox Content="{x:Static res:DefaultResources.UseDialUp_Checkbox}" Height="16" HorizontalAlignment="Left" Margin="12,22,0,0" Name="checkBoxUseDialUp" VerticalAlignment="Top" Width="114" Checked="checkBoxUseDialUp_Checked" Unchecked="checkBoxUseDialUp_Checked" />
+    </Grid>
+</UserControl>

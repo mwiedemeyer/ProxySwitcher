@@ -1,0 +1,1 @@
+﻿Copy the SkypeSwitcher.dll to the ProxySwitcher\AddIns folder and restart Proxy Switcher.

@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="ProxySwitcher.Actions.DefaultActions.ExecuteScript.ExecuteScriptSetup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:ProxySwitcher.Actions.DefaultActions"
+             mc:Ignorable="d" Height="300" Width="400">
+    <Grid>
+        <Button Content="{x:Static res:DefaultResources.Save_Button}" Height="23" HorizontalAlignment="Left" Margin="313,265,0,0" Name="buttonSave" VerticalAlignment="Top" Width="75" Click="buttonSave_Click" />
+        <TextBox HorizontalAlignment="Left" Margin="12,46,0,0" Name="textBoxScript" VerticalAlignment="Top" Width="276" />
+        <CheckBox Height="16" HorizontalAlignment="Left" Margin="22,74,0,0" Name="checkBoxWithParameter" VerticalAlignment="Top" Width="266" Content="{x:Static res:DefaultResources.WithParameter_Checkbox}" Checked="checkBox_Checked" Unchecked="checkBox_Checked" />
+        <Label Content="{x:Static res:DefaultResources.Script_Label}" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" Width="120" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="294,45,0,0" Name="buttonBrowse" VerticalAlignment="Top" Width="32" Click="buttonBrowse_Click" />
+        <Label Content="Example: Bla bla" Height="28" HorizontalAlignment="Left" Margin="22,118,0,0" Name="labelExample" VerticalAlignment="Top" />
+        <CheckBox Content="{x:Static res:DefaultResources.WithParameterName_Checkbox}" Height="16" HorizontalAlignment="Left" Margin="37,96,0,0" Name="checkBoxWithParameterName" VerticalAlignment="Top" Width="251" IsEnabled="{Binding ElementName=checkBoxWithParameter, Path=IsChecked}" Checked="checkBox_Checked" Unchecked="checkBox_Checked" />
+        <CheckBox Content="{x:Static res:DefaultResources.ExecuteScript_RunAsAdmin_Checkbox}" Height="16" HorizontalAlignment="Left" Margin="22,152,0,0" Name="checkBoxRunAsAdmin" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>

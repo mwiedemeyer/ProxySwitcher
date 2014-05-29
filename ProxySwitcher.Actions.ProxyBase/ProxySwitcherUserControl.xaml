@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ProxySwitcher.Actions.ProxyBase.ProxySwitcherUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:ProxySwitcher.Actions.ProxyBase"
+             mc:Ignorable="d" Name="ProxySwitcherActionUserControl"
+             d:DesignHeight="300" d:DesignWidth="400" xmlns:my="clr-namespace:System;assembly=mscorlib">
+    <Grid>
+        <Button Content="{x:Static res:ActionResources.Save_Button}" Height="23" HorizontalAlignment="Left" Margin="313,265,0,0" Name="buttonSave" VerticalAlignment="Top" Width="75" Click="buttonSave_Click" />
+        <Label Content="{x:Static res:ActionResources.Url_Label}" HorizontalAlignment="Left" Margin="14,40,0,0" Name="label2" VerticalAlignment="Top" Width="41" />
+        <TextBox HorizontalAlignment="Left" Margin="61,40,0,0" Name="textBoxUrl" VerticalAlignment="Top" Width="152" ToolTip="{x:Static res:ActionResources.Url_ToolTip}" />
+        <Label Content="{x:Static res:ActionResources.Port_Label}" HorizontalAlignment="Left" Margin="219,40,0,0" Name="label3" VerticalAlignment="Top" Width="42" />
+        <TextBox HorizontalAlignment="Left" Margin="267,42,0,0" Name="textBoxPort" VerticalAlignment="Top" Width="120" />
+        <CheckBox Content="{x:Static res:ActionResources.Bypass_Checkbox}" Height="16" HorizontalAlignment="Left" Margin="165,143,0,0" Name="checkBoxBypass" VerticalAlignment="Top" />
+        <CheckBox Content="{x:Static res:ActionResources.AutoConfig_Checkbox}" Height="16" HorizontalAlignment="Left" Margin="62,90,0,0" Name="checkBoxAutoConfig" VerticalAlignment="Top" Checked="checkBoxAutoConfig_Checked" />
+        <CheckBox Content="{x:Static res:ActionResources.AutoDetect_Checkbox}" Height="16" HorizontalAlignment="Left" Margin="62,68,0,0" Name="checkBoxAutoDetect" VerticalAlignment="Top" />
+        <Label Content="{x:Static res:ActionResources.Exceptions_Label}" HorizontalAlignment="Left" Margin="14,111,0,0" Name="label5" VerticalAlignment="Top" Width="75" />
+        <TextBox HorizontalAlignment="Left" Margin="95,115,0,0" Name="textBoxExceptions" VerticalAlignment="Top" Width="292" ToolTip="{x:Static res:ActionResources.Exceptions_ToolTip}" />
+        <Label Content="{x:Static res:ActionResources.Username_Label}" HorizontalAlignment="Left" Margin="14,186,0,0" Name="labelUsername" VerticalAlignment="Top" Width="103" />
+        <Label Content="{x:Static res:ActionResources.Password_Label}" HorizontalAlignment="Left" Margin="14,218,0,0" Name="labelPassword" VerticalAlignment="Top" Width="103" />
+        <CheckBox Content="{x:Static res:ActionResources.RequiresAuthentication_Checkbox}" Height="16" HorizontalAlignment="Left" Margin="14,164,0,0" Name="checkBoxRequiresAuthentication" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Margin="123,190,0,0" Name="textBoxUsername" VerticalAlignment="Top" Width="206" />
+        <PasswordBox Margin="123,221,0,0" Name="passwordBoxPassword" VerticalAlignment="Top" HorizontalAlignment="Left" Width="206" />
+        <ContentControl Height="51" HorizontalAlignment="Left" Margin="12,249,0,0" Name="contentControlAdditionalButtons" VerticalAlignment="Top" Width="295" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="62,12,0,0" Name="comboBoxScheme" VerticalAlignment="Top" Width="151" SelectionChanged="comboBoxScheme_SelectionChanged" IsEnabled="False" />
+        <Label Content="{x:Static res:ActionResources.Type_Label}" HorizontalAlignment="Left" Margin="14,9,0,0" Name="label1" VerticalAlignment="Top" Width="41" />
+        <CheckBox Content="{x:Static res:ActionResources.UseSame_Button}" Height="16" HorizontalAlignment="Left" Margin="219,14,0,0" Name="checkBoxUseSame" VerticalAlignment="Top" Width="169" Unchecked="checkBoxUseSame_Click" Checked="checkBoxUseSame_Click" IsChecked="True" />
+    </Grid>
+</UserControl>

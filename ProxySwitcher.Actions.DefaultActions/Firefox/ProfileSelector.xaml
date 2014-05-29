@@ -1,0 +1,17 @@
+﻿<Window x:Class="ProxySwitcher.Actions.DefaultActions.Firefox.ProfileSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:ProxySwitcher.Actions.DefaultActions"
+             mc:Ignorable="d" 
+             Height="248" Width="368" SizeToContent="Manual" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" Title="{x:Static res:DefaultResources.Firefox_ProfileSelectorTitle}">
+    <Grid>
+        <Label Content="{x:Static res:DefaultResources.Firefox_SelectProfileToSwitch}" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
+        <Button Content="{x:Static res:DefaultResources.Save_Button}" Height="23" HorizontalAlignment="Left" Name="buttonSave" VerticalAlignment="Top" Width="75" Click="buttonSave_Click" Margin="259,174,0,0" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,109,0,0" Name="textBoxFolder" VerticalAlignment="Top" Width="224" TextChanged="textBoxFolder_TextChanged" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,46,0,0" Name="comboBoxProfiles" VerticalAlignment="Top" Width="224" />
+        <Label Content="{x:Static res:DefaultResources.Firefox_ProfileFolder}" Height="28" HorizontalAlignment="Left" Margin="12,75,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="{x:Static res:DefaultResources.Firefox_RefreshProfiles}" Height="28" Margin="0,138,110,0" Name="labelRefreshProfiles" VerticalAlignment="Top" Foreground="Blue" HorizontalAlignment="Right" Width="236" HorizontalContentAlignment="Right" MouseUp="labelRefreshProfiles_MouseUp" Visibility="Hidden" Cursor="Hand" />
+    </Grid>
+</Window>

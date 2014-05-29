@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About_Label" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="ActionHasNoConfig" xml:space="preserve">
+    <value>Diese Aktion hat keine Konfigurationseinstellungen.</value>
+  </data>
+  <data name="ActionMissing" xml:space="preserve">
+    <value>Diese Aktion ist nicht länger verfügbar. Stellen Sie sicher, dass das zugehörige AddIn im AddIns Verzeichnis vorhanden ist oder löschen Sie diese Aktion.</value>
+  </data>
+  <data name="Actions_Label" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="Active_Checkbox" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="AddAction_Button" xml:space="preserve">
+    <value>Aktion hinzufügen</value>
+  </data>
+  <data name="AllNetworkInterfaces_ComboBox" xml:space="preserve">
+    <value>&lt;Alle Netzwerk Adapter&gt;</value>
+  </data>
+  <data name="Application_Label" xml:space="preserve">
+    <value>Anwendung</value>
+  </data>
+  <data name="AutoStart_CheckBox" xml:space="preserve">
+    <value>Automatisch mit Windows starten</value>
+  </data>
+  <data name="AutoSwitching_Menu" xml:space="preserve">
+    <value>Automatisches Umschalten</value>
+  </data>
+  <data name="CheckForUpdates_CheckBox" xml:space="preserve">
+    <value>Automatisch nach Updates suchen</value>
+  </data>
+  <data name="SettingsSaved_Status" xml:space="preserve">
+    <value>Einstellungen gespeichert</value>
+  </data>
+  <data name="Configuration_Label" xml:space="preserve">
+    <value>Konfiguration</value>
+  </data>
+  <data name="DeactivateNode_Name" xml:space="preserve">
+    <value>Unbekanntes Netzwerk</value>
+  </data>
+  <data name="DeleteAction_Button" xml:space="preserve">
+    <value>Aktion löschen</value>
+  </data>
+  <data name="DeleteNetworkAreYouSure" xml:space="preserve">
+    <value>Möchten Sie das Netzwerk '{0}' wirklich löschen?</value>
+  </data>
+  <data name="DeleteNetwork_Button" xml:space="preserve">
+    <value>Netzwerk löschen</value>
+  </data>
+  <data name="Exit_Menu" xml:space="preserve">
+    <value>Beenden</value>
+  </data>
+  <data name="FindMoreActions_Button" xml:space="preserve">
+    <value>Mehr Aktionen finden</value>
+  </data>
+  <data name="Home_Tab" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="IsNowActivated" xml:space="preserve">
+    <value>Netzwerk '{0}' wurde aktiviert</value>
+  </data>
+  <data name="Language_Label" xml:space="preserve">
+    <value>Sprache:</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Proxy Switcher ist Copyright 2012 Marco Wiedemeyer &lt;support@proxyswitcher.net&gt;.
+
+Proxy Switcher ist eine freie Software und kann ohne Kosten weiter verbreitet werden solange es nicht modifiziert wird. Es ist für privaten und kommerziellen Gebrauch kostenfrei verwendbar.
+
+Sie benutzen diese Software auf eigenes Risiko. Der Autor ist nicht verantwortlich für jeglichen Verlust oder Beschädigung die aus der normalen oder fehlerhaften Verwendung dieser Software entsteht.</value>
+  </data>
+  <data name="ManualSwitch_Menu" xml:space="preserve">
+    <value>Netzwerk aktivieren</value>
+  </data>
+  <data name="Method_Label" xml:space="preserve">
+    <value>Methode:</value>
+  </data>
+  <data name="Name_Label" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="NetworkConfigurationMethod_DNSSuffix" xml:space="preserve">
+    <value>DNS Suffix enthält</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+  <data name="NetworkConfigurationMethod_Gateway" xml:space="preserve">
+    <value>Gateway Adresse enthält</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+  <data name="NetworkConfigurationMethod_IP" xml:space="preserve">
+    <value>IP Adresse enthält</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+  <data name="NetworkConfigurationMethod_Location" xml:space="preserve">
+    <value>Aktuelle Position</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+  <data name="NetworkConfigurationMethod_WLANSSID" xml:space="preserve">
+    <value>WLAN SSID: Verbunden</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+  <data name="NetworkInterface_Label" xml:space="preserve">
+    <value>An bestimmtes Netzwerkinterface binden:</value>
+  </data>
+  <data name="Networks_Label" xml:space="preserve">
+    <value>Netzwerke</value>
+  </data>
+  <data name="NewNetworkName" xml:space="preserve">
+    <value>&lt;Neu&gt;</value>
+  </data>
+  <data name="NewNetwork_Button" xml:space="preserve">
+    <value>Neues Netzwerk</value>
+  </data>
+  <data name="OpenSettings_Button" xml:space="preserve">
+    <value>Einstellungen öffnen</value>
+  </data>
+  <data name="PolicyDisabled" xml:space="preserve">
+    <value>Proxy Switcher kann auf diesem Computer aufgrund einer Firmen Richtlinie nicht ausgeführt werden.
+
+Für Fragen wenden Sie sich an Ihren System Administrator.</value>
+  </data>
+  <data name="Query_Label" xml:space="preserve">
+    <value>Query:</value>
+  </data>
+  <data name="ReDetect_Menu" xml:space="preserve">
+    <value>Netzwerk erneut erkennen</value>
+  </data>
+  <data name="RestartApplication" xml:space="preserve">
+    <value>Proxy Switcher muss neu gestartet werden, damit die Änderungen wirksam werden.</value>
+  </data>
+  <data name="Save_Button" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="Settings_Tab" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="Show_Menu" xml:space="preserve">
+    <value>Anzeigen</value>
+  </data>
+  <data name="StartMinimized_CheckBox" xml:space="preserve">
+    <value>Minimiert starten</value>
+  </data>
+  <data name="Startup_ToolTipText" xml:space="preserve">
+    <value>Proxy Switcher</value>
+  </data>
+  <data name="Status_Detecting" xml:space="preserve">
+    <value>Netzwerkerkennung läuft...</value>
+  </data>
+  <data name="Status_DetectionFailed" xml:space="preserve">
+    <value>Netzwerkerkennung fehlgeschlagen</value>
+  </data>
+  <data name="Status_Loading" xml:space="preserve">
+    <value>Laden...</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Fertig</value>
+  </data>
+  <data name="UnknownNetworkDescription" xml:space="preserve">
+    <value>Verwenden Sie dieses Netzwerk, wenn kein anderes zutrifft.</value>
+  </data>
+  <data name="UnknownNetwork_Bubble" xml:space="preserve">
+    <value>Unbekanntes Netzwerk gefunden
+(Hier klicken um es hinzuzufügen)</value>
+  </data>
+  <data name="UnknownNetwork_CannotDelete" xml:space="preserve">
+    <value>Das unbekannte Netzwerk kann nicht gelöscht werden.</value>
+  </data>
+  <data name="UpdateAvailable" xml:space="preserve">
+    <value>Eine neue Version ({0}) ist verfügbar.
+Wollen Sie jetzt die Download Seite besuchen?</value>
+  </data>
+  <data name="UpdateInProgress_Button" xml:space="preserve">
+    <value>Prüfe...</value>
+  </data>
+  <data name="Update_Button" xml:space="preserve">
+    <value>Auf Updates prüfen</value>
+  </data>
+  <data name="UseWin7Mode_CheckBox" xml:space="preserve">
+    <value>Windows 7 Modus (Symbol in Taskbar und Tasktray anzeigen)</value>
+  </data>
+  <data name="Win7LocationAPI_CheckBox" xml:space="preserve">
+    <value>Windows 7 Location API verwenden</value>
+  </data>
+  <data name="AddInLoadError" xml:space="preserve">
+    <value>Es ist ein Problem mit einem oder mehreren AddIns aufgetreten. Deinstallieren Sie die zuletzt installierten AddIns und versuchen Sie es erneut. Stellen Sie außerdem sicher, dass Sie nur AddIns installieren, die zu dieser Version von Proxy Switcher ({0}) passen.</value>
+  </data>
+  <data name="NetworkIcon_ToolTip" xml:space="preserve">
+    <value>Wählen Sie ein Icon (*.ico) oder ein anderes Bild, um es anzuzeigen wenn dieses Netzwerk aktiviert ist. Nur *.ico Dateien können im Systemtray angezeigt werden.</value>
+  </data>
+  <data name="NetworkConfigurationMethod_WLANAvailable" xml:space="preserve">
+    <value>WLAN SSID: Nicht verbunden, aber verfügbar</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+  <data name="StopAfterFirstMatch_CheckBox" xml:space="preserve">
+    <value>Netzwerkerkennung anhalten, wenn ein Netzwerk erkannt wurde</value>
+  </data>
+  <data name="Donate_Button" xml:space="preserve">
+    <value>Spenden</value>
+  </data>
+  <data name="Donate_Label" xml:space="preserve">
+    <value>PayPal</value>
+  </data>
+  <data name="NetworkConfigurationMethod_ServerAvailable" xml:space="preserve">
+    <value>Folgender Server ist per Ping erreichbar</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+  <data name="NetworkConfigurationMethod_GatewayMAC" xml:space="preserve">
+    <value>Gateway MAC enthält</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+  <data name="OpenSite_Button" xml:space="preserve">
+    <value>Webseite</value>
+  </data>
+  <data name="NoNewNetwork_CheckBox" xml:space="preserve">
+    <value>Kein neues Netzwerk erstellen bei Klick auf den Tooltip</value>
+  </data>
+  <data name="UnknownNetwork_Bubble_NoNew" xml:space="preserve">
+    <value>Unbekanntes Netzwerk gefunden</value>
+  </data>
+  <data name="NetworkConfigurationMethod_DockingStationState" xml:space="preserve">
+    <value>Docking Station (1=Docked, 0=Undocked)</value>
+    <comment>Sync with NetworkConfigurationMethod</comment>
+  </data>
+</root>

@@ -1,0 +1,71 @@
+﻿<my:RibbonWindow x:Class="ProxySwitcher.MainWindowRibbon" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:ProxySwitcher.Core.Resources;assembly=ProxySwitcher.Core"
+        xmlns:my="clr-namespace:Fluent;assembly=Fluent" TextOptions.TextRenderingMode="Auto"
+        Title="Proxy Switcher" Height="500" Width="629" Background="White" Closing="RibbonWindow_Closing" Initialized="Window_Initialized" ResizeMode="CanMinimize" Loaded="Window_Loaded" StateChanged="RibbonWindow_StateChanged" Icon="/ProxySwitcher;component/Images/logo.ico">
+    <my:RibbonWindow.TaskbarItemInfo>
+        <TaskbarItemInfo />
+    </my:RibbonWindow.TaskbarItemInfo>
+    <Grid>
+        <my:Ribbon HorizontalAlignment="Left" Name="ribbon1" VerticalAlignment="Top" Height="187" Width="612" CanCustomizeQuickAccessToolBar="False" CanCustomizeRibbon="False" CanQuickAccessLocationChanging="False" IsQuickAccessToolBarVisible="False">
+
+            <my:Ribbon.Menu>
+                <my:Backstage>
+                    <my:BackstageTabControl>
+                        <my:BackstageTabItem Header="{x:Static res:LanguageResources.About_Label}">
+                            <Grid Margin="20,20,0,0">
+                                <TextBlock TextWrapping="Wrap" Text="{x:Static res:LanguageResources.License}"></TextBlock>
+                            </Grid>
+                        </my:BackstageTabItem>
+                        <my:Button Header="{x:Static res:LanguageResources.Exit_Menu}" Click="Button_Click" Tag="Exit" Icon="/ProxySwitcher;component/Images/exit.png"></my:Button>
+                    </my:BackstageTabControl>
+                </my:Backstage>
+            </my:Ribbon.Menu>
+            
+            <my:RibbonTabItem IsOpen="True" Header="{x:Static res:LanguageResources.Home_Tab}">
+                <my:RibbonGroupBox Header="{x:Static res:LanguageResources.Networks_Label}">
+                    <my:Button Name="ButtonNewNetwork" Header="{x:Static res:LanguageResources.NewNetwork_Button}"  LargeIcon="/ProxySwitcher;component/Images/newnetwork.png" Click="Button_Click" Tag="New"></my:Button>
+                    <my:Button Name="ButtonDeleteNetwork" Header="{x:Static res:LanguageResources.DeleteNetwork_Button}" LargeIcon="/ProxySwitcher;component/Images/delete.png" Click="Button_Click" Tag="DeleteNetwork"></my:Button>
+                </my:RibbonGroupBox>
+                <my:RibbonGroupBox Header="{x:Static res:LanguageResources.Actions_Label}">
+                    <my:DropDownButton Name="AddActionDropDownButton"  Header="{x:Static res:LanguageResources.AddAction_Button}" LargeIcon="/ProxySwitcher;component/Images/addaction.png">
+                        <my:Gallery Name="AddActionDropDownGallery" MaxItemsInRow="7" MinItemsInRow="6" Orientation="Horizontal"></my:Gallery>
+                    </my:DropDownButton>
+                    <my:Button Name="ButtonDeleteAction" Header="{x:Static res:LanguageResources.DeleteAction_Button}" LargeIcon="/ProxySwitcher;component/Images/delete.png" Click="Button_Click" Tag="DeleteAction"></my:Button>
+                </my:RibbonGroupBox>
+                <my:RibbonGroupBox Header="{x:Static res:LanguageResources.Application_Label}">
+                    <my:Button Name="ButtonRedetectNetwork" Header="{x:Static res:LanguageResources.ReDetect_Menu}" LargeIcon="/ProxySwitcher;component/Images/refresh.png" Click="Button_Click" Tag="RedetectNetwork"></my:Button>
+                </my:RibbonGroupBox>
+            </my:RibbonTabItem>
+            <my:RibbonTabItem Header="{x:Static res:LanguageResources.Settings_Tab}">
+                <my:RibbonGroupBox Header="{x:Static res:LanguageResources.Settings_Tab}">
+                    <my:Button Name="ButtonOpenSettings" Header="{x:Static res:LanguageResources.OpenSettings_Button}" LargeIcon="/ProxySwitcher;component/Images/action_nologo.png" Click="Button_Click" Tag="OpenSettings"></my:Button>
+                    <my:Button Name="CheckForUpdatesButton" Header="{x:Static res:LanguageResources.Update_Button}" LargeIcon="/ProxySwitcher;component/Images/updates.png" Click="Button_Click" Tag="UpdateApp"></my:Button>
+                </my:RibbonGroupBox>
+                <my:RibbonGroupBox Header="{x:Static res:LanguageResources.Donate_Label}">
+                    <my:Button Name="ButtonDonate" Header="{x:Static res:LanguageResources.Donate_Button}"  LargeIcon="/ProxySwitcher;component/Images/donate.png" Click="Button_Click" Tag="Donate"></my:Button>
+                </my:RibbonGroupBox>
+                <my:RibbonGroupBox Header="{x:Static res:LanguageResources.About_Label}">
+                    <StackPanel Orientation="Vertical">
+                        <Label Name="AboutVersionLabel" Content="Version x.x.x"></Label>
+                        <Label Name="AboutVersionBuildLabel" Visibility="Hidden" Content="Build xxxx"></Label>
+                    </StackPanel>
+                    <my:Button Name="ButtonOpenSite" Header="{x:Static res:LanguageResources.OpenSite_Button}" LargeIcon="/ProxySwitcher;component/Images/updates.png" Click="Button_Click" Tag="OpenSite"></my:Button>
+                </my:RibbonGroupBox>
+            </my:RibbonTabItem>
+        </my:Ribbon>
+        <GroupBox Header="{x:Static res:LanguageResources.Networks_Label}" Name="groupBoxNetworks" Width="189" Margin="10,140,0,0" Height="328" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid>
+                <TreeView Height="306" HorizontalAlignment="Left" Name="treeViewNetworks" VerticalAlignment="Top" Width="175" SelectedItemChanged="treeViewNetworks_SelectedItemChanged" BorderThickness="0" Drop="treeViewNetworks_Drop" AllowDrop="True" DragOver="treeViewNetworks_DragOver" MouseMove="treeViewNetworks_MouseMove"></TreeView>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{x:Static res:LanguageResources.Configuration_Label}" Name="groupBoxConfig" Width="408" Margin="197,140,0,0" Height="328" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid>
+                <ContentControl Height="300" HorizontalAlignment="Left" Name="contentControl1" VerticalAlignment="Top" Width="400"></ContentControl>
+            </Grid>
+        </GroupBox>
+        <Label Content="{x:Static res:LanguageResources.Status_Loading}" Height="28" HorizontalAlignment="Left" Margin="10,464,0,0" Name="labelAboutStatus" VerticalAlignment="Top" MouseLeftButtonUp="labelAboutStatus_MouseLeftButtonUp" />
+        <Label Content="Version x.x.x" Height="28" HorizontalAlignment="Left" Margin="525,464,0,0" Name="labelAboutVersion" VerticalAlignment="Top" />
+    </Grid>
+</my:RibbonWindow>

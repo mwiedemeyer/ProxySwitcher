@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  revision="1.0" schemaVersion="1.0" 
+  xmlns=
+  "http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <policyNamespaces>
+    <target prefix="proxyswitcher" namespace="ProxySwitcher.Policies" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="ProxySwitcher"
+              displayName="$(string.ProxySwitcher)"
+              explainText="$(string.ProxySwitcher_Help)" />
+  </categories>
+<policies>
+<policy name="IsDisabled" class="Machine"
+               displayName="$(string.Disabled)"
+               explainText="$(string.Disabled_Help)"
+               key="Software\Policies\ProxySwitcher"
+               valueName="IsDisabled">
+      <parentCategory ref="proxyswitcher:ProxySwitcher" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
+      <enabledValue>
+         <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+         <decimal value="0" />
+      </disabledValue>
+</policy>
+<policy name="NetworkSettingsLocked" class="Machine"
+               displayName="$(string.NetworkSettingsLocked)"
+               explainText="$(string.NetworkSettingsLocked_Help)"
+               key="Software\Policies\ProxySwitcher"
+               valueName="NetworkSettingsLocked">
+      <parentCategory ref="proxyswitcher:ProxySwitcher" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
+      <enabledValue>
+         <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+         <decimal value="0" />
+      </disabledValue>
+</policy>
+<policy name="ApplicationSettingsLocked" class="Machine"
+               displayName="$(string.ApplicationSettingsLocked)"
+               explainText="$(string.ApplicationSettingsLocked_Help)"
+               key="Software\Policies\ProxySwitcher"
+               valueName="ApplicationSettingsLocked">
+      <parentCategory ref="proxyswitcher:ProxySwitcher" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
+      <enabledValue>
+         <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+         <decimal value="0" />
+      </disabledValue>
+</policy>
+<policy name="SettingsLocation" class="Machine"
+               displayName="$(string.SettingsLocation)"
+               explainText="$(string.SettingsLocation_Help)" presentation="$(presentation.SettingsLocationPath)"
+               key="Software\Policies\ProxySwitcher">
+      <parentCategory ref="proxyswitcher:ProxySwitcher" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="SettingsLocation_Path" valueName="SettingsLocation" />
+      </elements>
+</policy>
+<policy name="PolicyLink" class="Machine"
+                 displayName="$(string.PolicyLink)"
+                 explainText="$(string.PolicyLink_Help)" presentation="$(presentation.PolicyLinkUrl)"
+                 key="Software\Policies\ProxySwitcher">
+    <parentCategory ref="proxyswitcher:ProxySwitcher" />
+    <supportedOn ref="SUPPORTED_ProductOnly" />
+    <elements>
+      <text id="PolicyLink_Url" valueName="PolicyLink" />
+    </elements>
+  </policy>
+</policies>
+</policyDefinitions>
+

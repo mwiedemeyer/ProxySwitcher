@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Proxy Switcher Resource File</displayName>
+  <description>Proxy Switcher Resource File</description>
+  <resources>
+    <stringTable>
+      <string id="ProxySwitcher">Proxy Switcher</string>
+      <string id="ProxySwitcher_Help">Manages Proxy Switcher settings.</string>
+      <string id="Disabled">Disable Proxy Switcher</string>
+      <string id="Disabled_Help">This setting disallow Proxy Switcher to run on the client.</string>
+      <string id="NetworkSettingsLocked">Lock the network settings</string>
+      <string id="NetworkSettingsLocked_Help">This setting disallow the user to edit the network settings.</string>
+      <string id="ApplicationSettingsLocked">Lock the application settings</string>
+      <string id="ApplicationSettingsLocked_Help">This setting disallow the user to edit the application settings.</string>
+      <string id="SettingsLocation">Override settings location path</string>
+      <string id="SettingsLocation_Help">This setting override the path where all of the settings files are stored on the client computer. If you use a UNC path which is not accessible during startup of Proxy Switcher, the default location will be used. If it is accessible, all config files will be copied to the local default folder for offline use.</string>
+      <string id="PolicyLink">The link to open on click on policy message</string>
+      <string id="PolicyLink_Help">The link to open on click on the status message 'Some settings are managed by your system administrator'.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SettingsLocationPath">
+        <text>Specify the local or UNC path to the settings files for the client computer. For example, the default path is: C:\Users\USERNAME\AppData\Roaming\ProxySwitcher\V3</text>
+        <textBox refId="SettingsLocation_Path">
+          <label>Path</label>
+        </textBox>
+      </presentation>
+      <presentation id="PolicyLinkUrl">
+        <text>Specify the URL:</text>
+        <textBox refId="PolicyLink_Url">
+          <label>URL</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

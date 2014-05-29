@@ -1,0 +1,132 @@
+==================
+3.6.2 - xx.xx.xxxx
+==================
+[FEATURE] Added a new network detection method: Docking Station State.
+			You can now execute actions based on the state of the docking station.
+
+==================
+3.6.1 - 22.03.2012
+==================
+[FEATURE] If an unknown network was detected, a click on the bubble popup created a new empty network.
+			Now there is a new setting to disable this behavior.
+[FEATURE] "Automatically detect settings" is now configurable for IE and Firefox
+[FIX] Drag & Drop of networks could crash the application
+
+==================
+3.6 - 03.02.2012
+==================
+[FEATURE] Introduced a new network detection method: Gateway MAC address
+[FIX] An exception could occur using the ping detection method
+[FIX] Network detection performance improvements
+[FIX] Environment variables (e.g. %username%) are now supported for the "Execute Script" action and for the Group Policy settings path
+[FIX] If a specific network interface was used and the configuration was copied to another machine it was automatically reset
+		to use "All network adapters". Now the application will try to find the network interface by name after trying the ID
+
+==================
+3.5.3 - 26.11.2011
+==================
+[FEATURE] Introduced a new network detection method: Is a server reachable by ping.
+			This is especially useful to detect VPN connections.
+
+==================
+3.5.2 - 29.08.2011
+==================
+[FEATURE] Highlight the currently active network in the network list and in the context menu of the tray icon
+[FIX] Proxy Switcher was shown in the task switcher (ALT+Tab) even if the main window was hidden (Windows XP and rarely Windows Vista/7)
+[FIX] Firefox proxy settings for "All" protocols not worked correctly
+
+==================
+3.5.1 - 04.08.2011
+==================
+[FEATURE] Change Default Printer updated to notify running applications
+[FEATURE] PayPal donation button added
+[FIX] In some cases, the error "Error creating IPC-Ports: Access denied" was shown
+
+==================
+3.5 - 12.07.2011
+==================
+[FEATURE] Updated Ribbon UI (Fluent) to the latest version to improve performance
+			=> All Action AddIns need to be updated, because of icon format limitations in Fluent
+[FEATURE] A new setting was added to stop detecting networks after the first match. In earlier versions, all matched networks were activated.
+
+==================
+3.3.3 - 24.02.2011
+==================
+[FEATURE] Methode "WLAN verfügbar" hinzugefügt. Nun ist es möglich Aktionen auszuführen, sobald ein WLAN in Reichweite ist, unabhängig,
+			ob man mit diesem Netzwerk verbunden ist.
+[FEATURE] Command-line Parameter (/redetect) hinzugefügt, um die Netzwerkerkennung von außen anzustoßen.
+
+==================
+3.3.2 - 24.01.2011
+==================
+[FIX] WLAN SSID Erkennung geändert. Methode sagte "enthält", es wurde aber auf genau den Wert geprüft.
+
+==================
+3.3.1 - 07.11.2010
+==================
+[FEATURE] Group Policy Template (ADMX) ist nun verfügbar
+[FIX] Einige kleinere fixes um das neue Group Policy Template vollständig zu unterstützen
+[FIX] Drag & Drop zum Ändern der Reihenfolge der Netzwerke gefixed
+
+==================
+3.3 - 29.10.2010
+==================
+[FEATURE] (#bugid38) Anzeige/Auswahl eines Icons für jedes Netzwerk. Anzeige im Tray und als Win7 Icon Overlay. Außerdem in der Netzwerk Liste.
+[FIX] (#bugid36) In manueller Auswahl auch deaktivierte Netze anzeigen
+[FIX] Kleinere Logging Verbesserungen
+
+==================
+3.2 - 29.08.2010
+==================
+[FIX] Kleinere Performance Probleme mit der Windows 7 Jumplist behoben
+[FIX] AddIn Fehlerbehandlung
+[FEATURE] Syntaxprüfung in Proxy Ausnahmen hinzugefügt
+[FEATURE] Vorbelegen von Proxyeinstellungen für IE8 und Opera
+![FEATURE] Action AddIn Interface geändert. Kommunikation nun mit dem Host zur Status Anzeige möglich. -> Breaking Change
+[FEATURE] Für IE, Opera und Firefox können Proxyeinstellungen nun je Protokoll (HTTP, HTTPS, FTP, SOCKS) separat eingerichtet werden.
+
+==================
+3.1 - 19.07.2010
+==================
+[FIX] Problem beim Proxy deaktivieren in Firefox
+[FEATURE] Manuelles Umschalten der Netzwerke im Kontextmenü
+[FEATURE] Windows 7 Jumplist Support
+[FEATURE] Möglichkeit eine Netzwerkkonfiguration nur an ein bestimmtes Interface zu binden
+[FEATURE] Drag & Drop zum umsortieren der Netzwerke. Dies beeinflusst die Reihenfolge der Erkennung.
+
+==================
+3.0 - 18.06.2010
+==================
+[FEATURE] Komplettes Re-Design (WPF 4 User Interface mit Built-In Windows 7 und Ribbon Unterstützung)
+[FEATURE] MEF als AddIn Framework
+[FEATURE] WLAN SSID auch fuer XP SP2 (mit Update http://support.microsoft.com/kb/918997)
+[FEATURE] Ribbon User Interface (http://fluent.codeplex.com/)
+[FEATURE] Windows 7 Location API Integration
+
+==================
+2.0.1 - 30.11.2009
+==================
+[FIX] Drucker beim deaktivieren wurde nicht korrekt gespeichert
+
+==================
+2.0 - 28.11.2009
+==================
+[FEATURE] Standard Drucker wechseln nun auch beim deaktivieren 
+[FEATURE] Neue Settings um das Taskbar Verhalten zu ändern und Nachfragen abzuschalten 
+[FEATURE] Im Auto Switch Tab werden nun einige Werte (WLAN SSID, DNS suffix, Gateway) mit Werten des aktuell verbundenen Netzes vorbelegt 
+[FEATURE] Wenn ein neues WLAN connected wird, erscheint eine Abfrage ob dieses WLAN einen Proxy benötigt, der dann direkt konfiguriert werden kann 
+[FEATURE] Mehr Hilfen im Programm verfügbar durch überfahren von Fragezeichen mit der Maus 
+[FEATURE] Opera Support nun inkl. Opera 10 
+[FEATURE] Firefox: Neben den Profilen kann nun auch der Standard Profilordner gewechselt werden 
+[FEATURE] Thunderbird gehört nun ebenfalls zu den Unterstützten Applikationen 
+[FEATURE] Internet Explorer 8: Proxy kann nun auch für Wählverbindungen gewechselt werden, allerdings aktuell nur mit einem kleinen Trick. Mehr dazu in der FAQ und im Tool über die Hilfe.
+[FEATURE] Alle Konfigurationsdateien ([User]\AppData\Roaming\ProxySwitcher) werden nun live überwacht und können per Group Policy, o.ä. geändert und ausgetauscht werden, ohne die Anwendung beenden zu müssen.
+			Dies ermöglicht z.B. Proxy Einstellungen für alle Mitarbeiter hinzuzufügen oder zu ändern. 
+[FEATURE] Group Policx (ADMX) Template: Proxy Switcher lässt sich nun über Group Policies einschränken und deaktivieren. Download und Infos hier: http://projects.mwiedemeyer.de/ProxySwitcher/SitePages/Policy.aspx
+[FEATURE] Das Template ist nur für Windows Vista oder höher und Window Server 2008 oder höher anwendbar, da Microsoft erst ab dieser Version das neue ADMX Format eingeführt hat.
+
+==================
+1.5.1 - 25.08.2009
+==================
+[FEATURE] Support für Windows 7, Internet Explorer 8 und Opera 
+[FEATURE] Standard Drucker wechseln
