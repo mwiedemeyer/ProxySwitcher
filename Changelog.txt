@@ -1,5 +1,11 @@
 ==================
-3.6.2 - xx.xx.xxxx
+3.6.3 - 10.06.2016
+==================
+[FIX] #4: IE proxy exceptions can now be longer than 255 characters. Thanks to @wobblybobz (https://github.com/wobblybobz).
+[FIX] #10: NotifyIcon updated. Works with Windows 10 now
+
+==================
+3.6.2
 ==================
 [FEATURE] Added a new network detection method: Docking Station State.
 			You can now execute actions based on the state of the docking station.

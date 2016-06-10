@@ -16,6 +16,7 @@ Features
  - WLAN Name
  - Current location via Windows 7 Location API (available only for Windows 7)
  - Server availability (tests if a server is reachable by ping) [NEW in 3.5.3]
+ - Docking Station state
 - Completely AddIn based. More Action AddIns are available for download and you can easily create your own actions with C#/VB.NET. AddIn Framework is based on Microsofts Managed Extensibility Framework (MEF).
 - The following Actions are shipped with Proxy Switcher
  - Internet Explorer / Windows

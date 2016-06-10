@@ -9,7 +9,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Marco Wiedemeyer <support@proxyswitcher.net>")]
 [assembly: AssemblyProduct("Proxy Switcher")]
-[assembly: AssemblyCopyright("Copyright © Marco Wiedemeyer 2012")]
+[assembly: AssemblyCopyright("Copyright © Marco Wiedemeyer 2012-2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -24,6 +24,6 @@ using System.Windows;
     // app, or any theme specific resource dictionaries)
 )]
 
-[assembly: AssemblyVersion("3.6.2.423")]
-[assembly: AssemblyFileVersion("3.6.2.423")]
+[assembly: AssemblyVersion("3.6.3.61016")]
+[assembly: AssemblyFileVersion("3.6.3.61016")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
