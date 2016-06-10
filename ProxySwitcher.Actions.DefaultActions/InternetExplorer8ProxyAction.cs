@@ -58,7 +58,7 @@ namespace ProxySwitcher.Actions.DefaultActions
 
             string sid = System.Security.Principal.WindowsIdentity.GetCurrent().User.Value;
 
-            // 01=disabled, 03=enabled, 05=auto config, 09=auto detect, 0D=auto config und auto detect
+            // 01=disabled, 03=enabled, 05=auto config, 09=auto detect, 0b auto detect and manual proxy, 0D=auto config und auto detect
             byte enabled = (byte)03;
             if (proxy.IsAutoDetect && !String.IsNullOrEmpty(prx))
                 enabled = (byte)11; //11=0b
@@ -128,7 +128,6 @@ namespace ProxySwitcher.Actions.DefaultActions
             //Reverse Byte Array
             Array.Reverse(bytes);
             Array.Resize(ref bytes, 4);
-            //System.Windows.MessageBox.Show(BitConverter.ToString(bytes).Replace("-", string.Empty));
 
             bytes.CopyTo(merged, lastPosition);
             lastPosition += 4;
