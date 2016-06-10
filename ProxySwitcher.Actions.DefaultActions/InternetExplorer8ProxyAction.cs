@@ -60,13 +60,15 @@ namespace ProxySwitcher.Actions.DefaultActions
 
             // 01=disabled, 03=enabled, 05=auto config, 09=auto detect, 0D=auto config und auto detect
             byte enabled = (byte)03;
-            if (proxy.IsAutoConf && proxy.IsAutoDetect)
+            if (proxy.IsAutoDetect && !String.IsNullOrEmpty(prx))
+                enabled = (byte)11; //11=0b
+            else if (proxy.IsAutoConf && proxy.IsAutoDetect)
                 enabled = (byte)13; //13=0d
             else if (proxy.IsAutoConf)
                 enabled = (byte)05;
             else if (proxy.IsAutoDetect)
                 enabled = (byte)09;
-
+            //Convert Proxy Addresses to Bytes
             byte[] proxyBytes = Encoding.Default.GetBytes(prx);
             byte entryLength = (byte)proxyBytes.Length;
             if (proxy.IsAutoConf)
@@ -90,7 +92,7 @@ namespace ProxySwitcher.Actions.DefaultActions
                         byPassString = "<local>";
                 }
             }
-
+            //Convert Exceptions to Bytes
             byte[] exceptions = Encoding.Default.GetBytes(byPassString);
 
             int autoConfigUrlArrayLength = 0;
@@ -102,31 +104,41 @@ namespace ProxySwitcher.Actions.DefaultActions
             }
 
             int lastPosition = 0;
-
+            //Set Merged
             byte[] merged = new byte[configStart.Length + proxyBytes.Length + 4 + exceptions.Length + 4 + autoConfigUrlArrayLength + 31];
-
+            
+            //Add ConfigStart to Merged
             configStart.CopyTo(merged, lastPosition);
             lastPosition = configStart.Length;
 
+            //Add ProxyServers to Merged
             proxyBytes.CopyTo(merged, lastPosition);
             lastPosition += proxyBytes.Length;
+            //Convert exceptions string length to Hex Values
+            string hexString = exceptions.Length.ToString("x");
+            //first character should be 0 if string is not even length
+            hexString = (hexString.Length % 2 == 0 ? "" : "0") + hexString;
+            //Convert Hex String to Byte Array
+            int NumberChars = hexString.Length;
+            byte[] bytes = new byte[NumberChars / 2];
+            for (int i = 0; i < NumberChars; i += 2)
+            {
+                bytes[i / 2] = Convert.ToByte(hexString.Substring(i, 2), 16);
+            }
+            //Reverse Byte Array
+            Array.Reverse(bytes);
+            Array.Resize(ref bytes, 4);
+            //System.Windows.MessageBox.Show(BitConverter.ToString(bytes).Replace("-", string.Empty));
 
-            if (exceptions.Length > 255)
-            {
-                //length is 379. in hex: 17B. muss in der reg als 17 und 0B eingetragen werden
-                //int l1 = exceptions.Length - 356;
-                //int l2 = 11;
-                //new byte[] { (byte)l1, (byte)l2, 0, 0 }.CopyTo(merged, lastPosition);
-            }
-            else
-            {
-                new byte[] { (byte)exceptions.Length, 0, 0, 0 }.CopyTo(merged, lastPosition);
-            }
+            bytes.CopyTo(merged, lastPosition);
             lastPosition += 4;
 
+            //Add Exceptions to Merged
             exceptions.CopyTo(merged, lastPosition);
             lastPosition += exceptions.Length;
 
+            
+            //Add AutoConfigURL to Merged
             new byte[] { (byte)autoConfigUrl.Length, 0, 0, 0 }.CopyTo(merged, lastPosition);
             lastPosition += 4;
 
