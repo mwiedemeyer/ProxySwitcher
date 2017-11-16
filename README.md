@@ -1,3 +1,5 @@
+**Attention: This project is not under active development. If you want to take over the project and want to maintain it, please (contact me)[https://blog.mwiedemeyer.de] and I will happily make you an owner of this repository.**
+
 ProxySwitcher
 =============
 
