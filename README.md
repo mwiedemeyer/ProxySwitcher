@@ -37,6 +37,3 @@ I've started this tool back in 2007 beginning with my new job as a IT/SharePoint
 I'd like to rewrite most parts and make it more simple and cleaner, but I have not that much time, therefore I'd be happy if someone want to start a rewrite or at least want to try to split the config UI and the core service, so that it has less memory footprint.
 Feel free to submit pull requests or drop me a line if you want to contribute (support at proxyswitcher net)
 
-Donate
-======
-If you want to donate, see http://proxyswitcher.net/ 
